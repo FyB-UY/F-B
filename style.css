@@ -1,0 +1,280 @@
+/* RESET BÁSICO Y FUENTE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #111118; /* Fondo muy oscuro, ligeramente azulado */
+    color: #f0f0f0; /* Texto claro */
+}
+
+/* COLORES BASE y GRADIENTE (NUEVA TEMÁTICA ROSA/MAGENTA) */
+:root {
+    --color-dark: #09090c;
+    --color-medium-dark: #1f1f2a;
+    --color-accent-start: #ff7f50; /* Tono Naranja/Coral (Lo mantendremos para los precios) */
+    --color-main-pink: #e91e63; /* <-- NUEVO COLOR ROSA/MAGENTA PRINCIPAL */
+    
+    /* GRADIENTE ROSA/MAGENTA para BOTONES */
+    --gradient-main: linear-gradient(135deg, #e91e63, #ff4081); /* Rosa oscuro a Rosa brillante */
+    --gradient-hover: linear-gradient(135deg, #ff4081, #ff79b3); /* Tonos más claros para el hover */
+}
+
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
+.main-header {
+    background-color: var(--color-dark);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.company-logo {
+    height: 50px; 
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent-start); /* Usa el tono naranja/coral como hover */
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    background: url('img/hero-background.jpg') no-repeat center center/cover; 
+    min-height: 70vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: 4rem; 
+    /* ¡ROSA/MAGENTA PRINCIPAL para la bienvenida! */
+    color: var(--color-main-pink); 
+    margin-bottom: 15px;
+    /* Sombras en tono rosa */
+    text-shadow: 0 0 15px rgba(233, 30, 99, 0.5); 
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #cccccc;
+    margin-bottom: 40px;
+}
+
+/* --- BOTONES Y CTAs (TOTALMENTE ROSA/MAGENTA) --- */
+.hero-cta-btn, .buy-btn, .contact-btn {
+    display: inline-block;
+    /* FONDO ROSA/MAGENTA (del nuevo gradiente) */
+    background: var(--gradient-main); 
+    color: white; 
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    text-decoration: none; 
+    width: 100%; 
+}
+
+.hero-cta-btn:hover, .buy-btn:hover:not(.disabled), .contact-btn:hover {
+    background: var(--gradient-hover); /* Gradiente de hover rosa/magenta más claro */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* --- SECCIONES PRINCIPALES Y PRODUCTOS --- */
+.product-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--color-medium-dark);
+}
+
+.product-section h2 {
+    font-size: 3rem;
+    color: var(--color-main-pink); /* Títulos de sección en rosa/magenta */
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: #0d0d0d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: left;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    border-color: var(--color-main-pink); /* Borde Rosa/Magenta en hover */
+}
+
+.product-image-container {
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background: #222;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    color: #f0f0f0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.product-card .price {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-accent-start); /* Precios en coral/naranja */
+    margin: 15px 0 25px 0;
+}
+
+/* INSIGNIAS Y ESTADO PROXIMO */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge.new {
+    background: var(--color-main-pink); /* Rosa/Magenta en la insignia "Nuevo" */
+    color: white;
+}
+
+.product-card.coming-soon {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.buy-btn.disabled {
+    background: #444;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* --- LLAMADA A LA ACCIÓN (CTA) --- */
+.call-to-action {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--color-dark);
+}
+
+.call-to-action h2 {
+    color: var(--color-main-pink);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    width: auto;
+    margin-top: 15px;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
+
+/* --- RESPONSIVE BÁSICO --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 15px;
+    }
+    .nav-links li {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    .product-section {
+        padding: 50px 15px;
+    }
+}
