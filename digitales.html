@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitales - F&B SHOP</title>
+    <link rel="icon" type="image/png" href="img/tu-logo.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
         <nav class="navbar">
-            <a href="index.html"><img src="img/tu-logo.png" alt="Logo" class="company-logo"></a>
+            <a href="index.html">
+                <img src="img/tu-logo.png" alt="Logo" class="company-logo">
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="digitales.html">Digitales</a></li>
@@ -21,20 +24,61 @@
     </header>
 
     <main style="padding-top: 100px;">
-        <section class="product-section digital-bg">
-            <h2>🛍️ Productos Digitales</h2>
+        <section id="digital" class="product-section digital-bg">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2>🛍️ Productos Digitales</h2>
+                <p class="section-description">Cursos y guías con descarga inmediata para potenciar tus conocimientos.</p>
+            </div>
+
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="img/digital-product-1.jpg" class="product-image">
-                    <h3>Curso de Diseño Web</h3>
-                    <div class="product-details">
-                        <ul><li>✅ Acceso de por vida</li></ul>
+                    <span class="badge new">NUEVO</span>
+                    <div class="product-image-container">
+                        <img src="img/digital-product-1.jpg" alt="Curso de Diseño Web Avanzado" class="product-image">
                     </div>
+                    <h3>Curso de Diseño Web Avanzado</h3>
+                    <p class="description">Aprende a crear sitios web modernos con HTML, CSS y JS.</p>
+                    
+                    <div class="product-details">
+                        <ul style="text-align: left; font-size: 0.9em; margin: 10px 0; color: #555;">
+                            <li>✅ +20 horas de video HD</li>
+                            <li>✅ Acceso de por vida</li>
+                            <li>✅ Certificado al finalizar</li>
+                            <li>✅ Proyectos reales paso a paso</li>
+                        </ul>
+                    </div>
+
                     <span class="price">$59.99 USD</span>
-                    <button class="buy-btn">Comprar Ahora</button>
+                    <button class="buy-btn" data-product-id="D001">Comprar y Descargar</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="img/digital-product-2.jpg" alt="Ebook: 10 Claves del Marketing" class="product-image">
+                    </div>
+                    <h3>Ebook: 10 Claves del Marketing</h3>
+                    <p class="description">Guía completa para estrategias de marketing en redes sociales.</p>
+                    
+                    <div class="product-details">
+                        <ul style="text-align: left; font-size: 0.9em; margin: 10px 0; color: #555;">
+                            <li>📖 Formato PDF y EPUB</li>
+                            <li>📖 150 páginas de contenido</li>
+                            <li>📖 Plantillas de regalo incluidas</li>
+                            <li>📖 Acceso a comunidad privada</li>
+                        </ul>
+                    </div>
+
+                    <span class="price">$19.99 USD</span>
+                    <button class="buy-btn" data-product-id="D002">Comprar y Descargar</button>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025/2026 F&B Profesional. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
