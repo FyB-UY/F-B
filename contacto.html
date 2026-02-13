@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - F&B SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html"><img src="img/tu-logo.png" alt="Logo" class="company-logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="digitales.html">Digitales</a></li>
+                <li><a href="fisicos.html">Físicos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 120px 20px;">
+        <section class="call-to-action">
+            <h2>Contáctanos</h2>
+            <a href="https://wa.me/59800000000" class="contact-btn" style="background:#25D366;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            
+            <div class="contact-form-container" style="max-width:500px; margin:40px auto; background:#f9f9f9; padding:30px; border-radius:15px;">
+                <form action="https://formspree.io/f/TU_CORREO_AQUI" method="POST">
+                    <input type="text" name="name" placeholder="Nombre" required style="width:100%; margin-bottom:10px; padding:10px;">
+                    <input type="email" name="email" placeholder="Email" required style="width:100%; margin-bottom:10px; padding:10px;">
+                    <textarea name="message" placeholder="Tu mensaje" rows="4" style="width:100%; margin-bottom:10px; padding:10px;"></textarea>
+                    <button type="submit" class="hero-cta-btn" style="width:100%; border:none;">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
