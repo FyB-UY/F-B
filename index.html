@@ -3,143 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F&B SHOP</title>
+    <title>F&B SHOP - Inicio</title>
+    <link rel="icon" type="image/png" href="img/tu-logo.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        #welcome-screen {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #1a1a1a; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; z-index: 9999;
+            transition: opacity 0.8s ease, visibility 0.8s; color: white;
+        }
+        #welcome-screen.hidden { opacity: 0; visibility: hidden; }
+        .loader-logo { width: 150px; margin-bottom: 20px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+    </style>
 </head>
 <body>
+    <div id="welcome-screen">
+        <img src="img/tu-logo.png" alt="Logo" class="loader-logo">
+        <h1>Bienvenidos a F&B SHOP</h1>
+    </div>
 
     <header class="main-header">
         <nav class="navbar">
-            <a href="#" class="logo-link">
-                <img src="img/tu-logo.png" alt="Logo" class="company-logo">
-            </a>
+            <a href="index.html"><img src="img/tu-logo.png" alt="Logo" class="company-logo"></a>
             <ul class="nav-links">
-                <li><a href="#digital">Digitales</a></li>
-                <li><a href="#fisico">Físicos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="digitales.html">Digitales</a></li>
+                <li><a href="fisicos.html">Físicos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero-section">
         <div class="hero-content">
-            <h1>Bienvenidos a F&B: Los Mejores Productos en Oferta!</h1>
-            <p>Descubre nuestra exclusiva selección de productos digitales y físicos diseñados para elevar tu experiencia.</p>
-            <a href="#digital" class="hero-cta-btn">Explorar Productos</a>
+            <h1>Bienvenidos a F&B SHOP</h1>
+            <p>Descubre nuestra exclusiva selección de productos.</p>
+            <a href="digitales.html" class="hero-cta-btn">Ver Productos</a>
         </div>
     </section>
 
-    <main>
-        <section id="digital" class="product-section digital-bg">
-            <h2>🛍️ Productos Digitales (Descarga Inmediata)</h2>
-            <p class="section-description">Cursos, E-books, Plantillas y más para llevar tus habilidades al siguiente nivel.</p>
-            <div class="product-grid">
-                
-                <div class="product-card">
-                    <span class="badge new">NUEVO</span>
-                    <div class="product-image-container">
-                        <img src="img/digital-product-1.jpg" alt="Curso de Diseño Web Avanzado" class="product-image">
-                    </div>
-                    <h3>Curso de Diseño Web Avanzado</h3>
-                    <p class="description">Aprende a crear sitios web modernos con HTML, CSS y JS.</p>
-                    
-                    <div class="product-details">
-                        <ul style="text-align: left; font-size: 0.9em; margin: 10px 0; color: #555;">
-                            <li>✅ +20 horas de video HD</li>
-                            <li>✅ Acceso de por vida</li>
-                            <li>✅ Certificado al finalizar</li>
-                            <li>✅ Archivos base incluidos</li>
-                        </ul>
-                    </div>
-
-                    <span class="price">$59.99 USD</span>
-                    <button class="buy-btn" data-product-id="D001">Comprar y Descargar</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image-container">
-                        <img src="img/digital-product-2.jpg" alt="Ebook: 10 Claves del Marketing" class="product-image">
-                    </div>
-                    <h3>Ebook: 10 Claves del Marketing</h3>
-                    <p class="description">Guía completa para estrategias de marketing en redes sociales.</p>
-                    
-                    <div class="product-details">
-                        <ul style="text-align: left; font-size: 0.9em; margin: 10px 0; color: #555;">
-                            <li>📖 Formato PDF y EPUB</li>
-                            <li>📖 150 páginas de contenido</li>
-                            <li>📖 Casos de estudio reales</li>
-                        </ul>
-                    </div>
-
-                    <span class="price">$19.99 USD</span>
-                    <button class="buy-btn" data-product-id="D002">Comprar y Descargar</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="fisico" class="product-section fisico-bg">
-            <h2>📦 Productos Físicos (Próximamente)</h2>
-            <p class="section-description">¡Estamos preparando el lanzamiento de nuestra línea de productos físicos de alta calidad!</p>
-            <div class="product-grid">
-                <div class="product-card coming-soon">
-                    <span class="badge soon">PRONTO</span>
-                    <div class="product-image-container">
-                        <img src="img/physical-product-1.jpg" alt="Camiseta de Colección Code" class="product-image">
-                    </div>
-                    <h3>Camiseta de Colección "Code"</h3>
-                    <p class="description">Diseño exclusivo y tela de algodón premium.</p>
-                    
-                    <div class="product-details">
-                        <p style="font-size: 0.85em; color: #777;">Tallas: S, M, L, XL | Color: Negro Mate</p>
-                    </div>
-
-                    <span class="price">Precio Estimado: $35.00 USD</span>
-                    <button class="buy-btn disabled">Ver Detalles</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="call-to-action">
-            <h2>¿Tienes Preguntas?</h2>
-            <p>Estamos aquí para ayudarte. Elige tu método preferido:</p>
-            
-            <div class="contact-options" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
-                <a href="mailto:contacto@tumarca.com" class="contact-btn">
-                    <i class="fas fa-envelope"></i> Enviar Email
-                </a>
-                
-                <a href="https://wa.me/1234567890" target="_blank" class="contact-btn" style="background-color: #25D366;">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-            </div>
-
-            <div class="contact-form-container" style="max-width: 500px; margin: 40px auto 0; text-align: left; background: #f9f9f9; padding: 20px; border-radius: 10px;">
-                <form action="#">
-                    <div style="margin-bottom: 15px;">
-                        <label>Nombre:</label>
-                        <input type="text" placeholder="Tu nombre" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <label>Correo Electrónico:</label>
-                        <input type="email" placeholder="tu@email.com" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <label>Mensaje:</label>
-                        <textarea rows="4" placeholder="¿En qué podemos ayudarte?" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; font-family: inherit;"></textarea>
-                    </div>
-                    <button type="submit" class="hero-cta-btn" style="width: 100%; border: none; cursor: pointer;">Enviar Mensaje</button>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2025/2026 F&B Profesional. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => document.getElementById('welcome-screen').classList.add('hidden'), 2000);
+        });
+    </script>
 </body>
 </html>
